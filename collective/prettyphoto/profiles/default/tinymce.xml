@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<object>
+    <layout>
+        <styles>
+            <element value="prettyPhoto|a|prettyPhoto" />
+        </styles>
+    </layout>
+</object>
