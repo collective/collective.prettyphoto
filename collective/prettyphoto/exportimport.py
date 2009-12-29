@@ -26,7 +26,10 @@ def import_various(context):
 
     paragraph_styles = list(kupu.getParagraphStyles())
 
-    new_styles = [('prettyPhoto', 'prettyPhoto|a'), ]
+    new_styles = [
+        ('prettyPhoto Link', 'prettyPhoto|a'),
+        ('prettyPhoto Iframe Link', 'prettyPhotoIframe|a'),
+    ]
     to_add = dict(new_styles)
 
     for style in paragraph_styles:
