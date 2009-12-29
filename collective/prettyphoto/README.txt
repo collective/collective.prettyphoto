@@ -33,8 +33,8 @@ Installing with buildout
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you are using `buildout`_ to manage your instance installing
-collective.blogging is even simpler. You can install
-collective.blogging by adding it to the eggs line for your instance::
+collective.prettyphoto is even simpler. You can install
+collective.prettyphoto by adding it to the eggs line for your instance::
 
     [instance]
     eggs = collective.prettyphoto
