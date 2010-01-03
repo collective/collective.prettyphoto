@@ -41,6 +41,6 @@ class JavaScript(BrowserView):
                    counter_sep = getattr(self.prettyphoto_properties, 'counter_sep', '/'),
                    theme = getattr(self.prettyphoto_properties, 'theme', 'light_rounded'),
                    autoplay = getattr(self.prettyphoto_properties, 'autoplay', True) and 'true' or 'false',
-                   iframe_width = getattr(self.prettyphoto_properties, 'autoplay', '75%'),
-                   iframe_height = getattr(self.prettyphoto_properties, 'autoplay', '75%'),
+                   iframe_width = getattr(self.prettyphoto_properties, 'iframe_width', '75%'),
+                   iframe_height = getattr(self.prettyphoto_properties, 'iframe_width', '75%'),
               )

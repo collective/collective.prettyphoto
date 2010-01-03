@@ -27,8 +27,8 @@ def import_various(context):
     paragraph_styles = list(kupu.getParagraphStyles())
 
     new_styles = [
-        ('prettyPhoto Link', 'prettyPhoto|a'),
-        ('prettyPhoto Iframe Link', 'prettyPhotoIframe|a'),
+        ('prettyPhoto', 'prettyPhoto Link|a'),
+        ('prettyPhotoIframe', 'prettyPhoto Iframe Link|a'),
     ]
     to_add = dict(new_styles)
 
@@ -36,6 +36,8 @@ def import_various(context):
         css_class = style.split('|')[-1]
         if css_class in to_add:
             del to_add[css_class]
+        if css_class in to_remove:
+            paragraph_styles.remove(style)
 
     if to_add:
         paragraph_styles += ['%s|%s' % (v, k) for k, v in new_styles if \
