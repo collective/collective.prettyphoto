@@ -23,14 +23,14 @@ Installing
 This package requires Plone 3.x or later (tested on 3.3.3).
 
 Installing without buildout
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------
 
 Install this package in either your system path packages or in the lib/python
 directory of your Zope instance. You can do this using either easy_install or
 via the setup.py script.
 
 Installing with buildout
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
 If you are using `buildout`_ to manage your instance installing
 collective.prettyphoto is even simpler. You can install
