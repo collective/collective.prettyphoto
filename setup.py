@@ -5,7 +5,7 @@ version = '0.2'
 
 setup(name='collective.prettyphoto',
       version=version,
-      description="prettyPhoto implementation for Plone.",
+      description="prettyPhoto integration for Plone.",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from
