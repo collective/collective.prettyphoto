@@ -6,7 +6,7 @@ version = '0.3'
 setup(name='collective.prettyphoto',
       version=version,
       description="prettyPhoto integration for Plone.",
-      long_description=open("README.txt").read() + "\n" +
+      long_description=open("README.txt").read() + "\n\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from
       # http://pypi.python.org/pypi?%3Aaction=list_classifiers
