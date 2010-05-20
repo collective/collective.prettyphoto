@@ -31,7 +31,7 @@ class JavaScript(BrowserView):
                     showTitle: %(show_title)s, /* true/false */
                     counter_separator_label: '%(counter_sep)s', /* The separator for the gallery counter 1 "of" 2 */
                     theme: '%(theme)s',
-                    autoplay: %(autoplay)s, /* Automatically start videos: True/False */
+                    autoplay: %(autoplay)s /* Automatically start videos: True/False */
                 });
             });
         });

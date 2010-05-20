@@ -9,7 +9,7 @@
     <include package=".browser" />
     <include file="skins.zcml" />
 
-    <!-- Register the installation GenericSetup extension profile -->
+    <!-- profiles -->
     <genericsetup:registerProfile
         name="default"
         title="collective.prettyphoto"
@@ -18,6 +18,16 @@
         provides="Products.GenericSetup.interfaces.EXTENSION"
     />
 
+    <genericsetup:registerProfile
+        name="uninstall"
+        title="Uninstall prettyPhoto"
+        directory="profiles/uninstall"
+        description="An uninstall profile for the prettyPhoto extension."
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+
+    <!-- import steps -->
     <genericsetup:importStep
         name="collective.prettyphoto"
         title="prettyPhoto configuration"
@@ -26,6 +36,7 @@
         <depends name="kupu" />
     </genericsetup:importStep>
 
+    <!-- upgrades -->
     <genericsetup:upgradeStep
         title="Upgrade collective.prettyphoto"
         description="Removes wrong styles from kupu styles menu"
@@ -33,6 +44,26 @@
         destination="0.2"
         handler=".migration.migrateTo02"
         sortkey="1"
+        profile="collective.prettyphoto:default"
+    />  
+
+    <genericsetup:upgradeStep
+        title="Upgrade collective.prettyphoto"
+        description="Empty upgrade step"
+        source="0.2"
+        destination="0.3"
+        handler=".migration.emptyMigrate"
+        sortkey="2"
+        profile="collective.prettyphoto:default"
+    />  
+
+    <genericsetup:upgradeStep
+        title="Upgrade collective.prettyphoto"
+        description="Empty upgrade step"
+        source="0.3"
+        destination="0.3.1"
+        handler=".migration.emptyMigrate"
+        sortkey="3"
         profile="collective.prettyphoto:default"
     />  
 
