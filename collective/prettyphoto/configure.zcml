@@ -59,10 +59,10 @@
 
     <genericsetup:upgradeStep
         title="Upgrade collective.prettyphoto"
-        description="Empty upgrade step"
+        description="Add new custom browser layer"
         source="0.3"
         destination="0.3.1"
-        handler=".migration.emptyMigrate"
+        handler=".migration.migrateTo031"
         sortkey="3"
         profile="collective.prettyphoto:default"
     />  

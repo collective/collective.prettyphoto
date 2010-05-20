@@ -1,8 +1,10 @@
 # Migration utilities and migration steps
 from zope.component import getUtility
+from plone.browserlayer import utils as layerutils
 
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.interfaces.siteroot import IPloneSiteRoot
+from collective.prettyphoto.interfaces import IPrettyPhotoSpecific
 
 import logging
 logger  = logging.getLogger('prettyphoto-migration')
@@ -34,3 +36,13 @@ def migrateTo02(context):
                 logger.info("Removed style \"%s\" from kupu config." % style)
     
         kupu.configure_kupu(parastyles=paragraph_styles)
+
+
+def migrateTo031(context):
+    """Add new custom browserlayer."""
+    
+    if not IPrettyPhotoSpecific in layerutils.registered_layers():
+        layerutils.register_layer(IPrettyPhotoSpecific, name='collective.prettyphoto')
+        logger.info('Browser layer "collective.prettyphoto" installed.')
+
+    
