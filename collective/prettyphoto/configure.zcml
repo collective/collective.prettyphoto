@@ -2,6 +2,7 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="collective.prettyphoto">
 
     <five:registerPackage package="." initialize=".initialize" />
@@ -10,10 +11,18 @@
     <include file="skins.zcml" />
 
     <!-- profiles -->
-    <genericsetup:registerProfile
+    <genericsetup:registerProfile zcml:condition="have plone-4"
         name="default"
         title="collective.prettyphoto"
         directory="profiles/default"
+        description="prettyPhoto (Lightweight jQuery Lightbox clone)"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+
+    <genericsetup:registerProfile zcml:condition="not-have plone-4"
+        name="default"
+        title="collective.prettyphoto"
+        directory="profiles/default-plone3"
         description="prettyPhoto (Lightweight jQuery Lightbox clone)"
         provides="Products.GenericSetup.interfaces.EXTENSION"
     />
