@@ -20,7 +20,7 @@ This plugin has been tested and is known to work in the following browsers
 Installing
 ==========
 
-This package requires Plone 3.x or later (tested on 3.3.3).
+This package requires Plone 3.x or later (tested on 3.3.5 and 4.0b5).
 
 Installing without buildout
 ---------------------------

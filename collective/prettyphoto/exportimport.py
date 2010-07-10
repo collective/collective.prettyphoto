@@ -16,6 +16,7 @@ _PROPERTIES = [
     dict(name='iframe_height', type_='string', value='75%'),
 ]
 
+
 def configureKupu(kupu):
 
     paragraph_styles = list(kupu.getParagraphStyles())
@@ -35,6 +36,7 @@ def configureKupu(kupu):
         paragraph_styles += ['%s|%s' % (v, k) for k, v in new_styles if \
                              k in to_add]
         kupu.configure_kupu(parastyles=paragraph_styles)
+
 
 def import_various(context):
     if not context.readDataFile('collective.prettyphoto.txt'):

@@ -10,9 +10,7 @@ def resetLayers(context):
 
     if context.readDataFile('collective.prettyphoto_uninstall.txt') is None:
         return
-    
+
     if IPrettyPhotoSpecific in layerutils.registered_layers():
         layerutils.unregister_layer(name='collective.prettyphoto')
         log.info('Browser layer "collective.prettyphoto" uninstalled.')
-
-

@@ -35,12 +35,12 @@ class JavaScript(BrowserView):
                 });
             });
         });
-        """ % dict(speed = getattr(self.prettyphoto_properties, 'speed', 'normal'),
-                   opacity = getattr(self.prettyphoto_properties, 'opacity', '0.80'),
-                   show_title = getattr(self.prettyphoto_properties, 'show_title', True) and 'true' or 'false',
-                   counter_sep = getattr(self.prettyphoto_properties, 'counter_sep', '/'),
-                   theme = getattr(self.prettyphoto_properties, 'theme', 'light_rounded'),
-                   autoplay = getattr(self.prettyphoto_properties, 'autoplay', True) and 'true' or 'false',
-                   iframe_width = getattr(self.prettyphoto_properties, 'iframe_width', '75%'),
-                   iframe_height = getattr(self.prettyphoto_properties, 'iframe_width', '75%'),
+        """ % dict(speed=getattr(self.prettyphoto_properties, 'speed', 'normal'),
+                   opacity=getattr(self.prettyphoto_properties, 'opacity', '0.80'),
+                   show_title=getattr(self.prettyphoto_properties, 'show_title', True) and 'true' or 'false',
+                   counter_sep=getattr(self.prettyphoto_properties, 'counter_sep', '/'),
+                   theme=getattr(self.prettyphoto_properties, 'theme', 'light_rounded'),
+                   autoplay=getattr(self.prettyphoto_properties, 'autoplay', True) and 'true' or 'false',
+                   iframe_width=getattr(self.prettyphoto_properties, 'iframe_width', '75%'),
+                   iframe_height=getattr(self.prettyphoto_properties, 'iframe_width', '75%'),
               )
