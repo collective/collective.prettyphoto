@@ -1,8 +1,8 @@
 Changelog
 =========
 
-after 0.3.2
------------
+0.3.3 (2010-12-20)
+------------------
 
 - Fixed iframe configuration (width was used for height too)
   [fRiSi]
