@@ -1,11 +1,18 @@
 Changelog
 =========
 
+after 0.3.2
+-----------
+
+- Fixed iframe configuration (width was used for height too)
+  [fRiSi]
+
 0.3.2 (2010-07-10)
 ------------------
 
 - Fixed install issue with Plone 4 (Large Plone Folder was removed).
   [hpeteragitator]
+
 - Set version in metadata.xml to 1, since this has nothing to do with the package version.
   [tmassman]
 
