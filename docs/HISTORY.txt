@@ -1,6 +1,13 @@
 Changelog
 =========
 
+0.4.0 (Unreleased)
+------------------
+
+- Upgraded to prettyPhoto library including it's css and image sprite to 3.0.1
+  to fix issues with jQuery 1.4.4 (see http://bit.ly/hxYUrt) which is shipped 
+  with latest Plone 4 by default. This fixes #2.  [saily]
+
 0.3.3 (2010-12-20)
 ------------------
 
