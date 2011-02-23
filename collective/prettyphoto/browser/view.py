@@ -31,7 +31,9 @@ class JavaScript(BrowserView):
                     showTitle: %(show_title)s, /* true/false */
                     counter_separator_label: '%(counter_sep)s', /* The separator for the gallery counter 1 "of" 2 */
                     theme: '%(theme)s',
-                    autoplay: %(autoplay)s /* Automatically start videos: True/False */
+                    autoplay: %(autoplay)s, /* Automatically start videos: True/False */
+                    slideshow: %(slideshow)s, /* false OR interval time in ms */
+                    overlay_gallery: %(overlay_gallery)s /* If set to true, a gallery will overlay the fullscreen image on mouse over */
                 });
             });
         });
@@ -43,4 +45,6 @@ class JavaScript(BrowserView):
                    autoplay=getattr(self.prettyphoto_properties, 'autoplay', True) and 'true' or 'false',
                    iframe_width=getattr(self.prettyphoto_properties, 'iframe_width', '75%'),
                    iframe_height=getattr(self.prettyphoto_properties, 'iframe_height', '75%'),
+                   overlay_gallery=getattr(self.prettyphoto_properties, 'overlay_gallery', False) and 'true' or 'false',
+                   slideshow=getattr(self.prettyphoto_properties, 'slideshow', 0) or 'false',
               )
