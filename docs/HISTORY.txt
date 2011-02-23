@@ -13,7 +13,7 @@ Changelog
   [saily]
 
 - Added 'overlay_gallery' and 'slideshow' as additional configuration options
-  but disabled by default cause of a bug in jquery.prettyPhoto.js which aviods
+  but disabled by default cause of a bug in jquery.prettyPhoto.js which avoids
   displaying thumbnails not ending on (jpg|jpeg|png|gif). 
   See http://bit.ly/eKYdrF
   [saily]
