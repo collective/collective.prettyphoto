@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.4.0 (Unreleased)
+0.4.0 (2011-02-23)
 ------------------
 
 - Upgraded to prettyPhoto library including it's css and image sprite to 3.0.1
