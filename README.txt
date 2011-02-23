@@ -15,12 +15,12 @@ This plugin has been tested and is known to work in the following browsers
 
 * Internet Explorer 6.0+
 
-`collective.prettyphoto` integrates prettyPhoto 2.5.6 into Plone.
+`collective.prettyphoto` integrates prettyPhoto 3.0.1 into Plone.
 
 Installing
 ==========
 
-This package requires Plone 3.x or later (tested on 3.3.5 and 4.0b5).
+This package requires Plone 3.x or later (tested on 3.3.5 and 4.0.3).
 
 Installing without buildout
 ---------------------------
