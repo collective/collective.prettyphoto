@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<object>
+    <layout>
+        <styles>
+            <element value="prettyPhoto Link|a|prettyPhoto" />
+            <element value="prettyPhoto Iframe Link|a|prettyPhotoIframe" />
+        </styles>
+    </layout>
+</object>

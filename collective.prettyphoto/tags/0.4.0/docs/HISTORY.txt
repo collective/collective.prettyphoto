@@ -1,0 +1,69 @@
+Changelog
+=========
+
+0.4.0 (Unreleased)
+------------------
+
+- Upgraded to prettyPhoto library including it's css and image sprite to 3.0.1
+  to fix issues with jQuery 1.4.4 (see http://bit.ly/hxYUrt) which is shipped 
+  with latest Plone 4 by default. This fixes #2.
+  [saily]
+  
+- Added default thumbnails for 'overlay_galleries' feature.
+  [saily]
+
+- Added 'overlay_gallery' and 'slideshow' as additional configuration options
+  but disabled by default cause of a bug in jquery.prettyPhoto.js which aviods
+  displaying thumbnails not ending on (jpg|jpeg|png|gif). 
+  See http://bit.ly/eKYdrF
+  [saily]
+
+0.3.3 (2010-12-20)
+------------------
+
+- Fixed iframe configuration (width was used for height too)
+  [fRiSi]
+
+0.3.2 (2010-07-10)
+------------------
+
+- Fixed install issue with Plone 4 (Large Plone Folder was removed).
+  [hpeteragitator]
+
+- Set version in metadata.xml to 1, since this has nothing to do with the package version.
+  [tmassman]
+
+0.3.1 (2010-05-19)
+------------------
+
+- Fixed version numbers and missing upgrade steps.
+  [tmassman]
+
+- Added custom browserlayer.
+  [tmassman]
+
+- Upgrade to prettyPhoto 2.5.6
+  [tmassman]
+
+0.3 (2010-05-17)
+----------------
+
+- Don't fail when installing on sites w/o kupu (plone4 compatibility).
+  [fRiSi]
+
+0.2 (2010-01-03)
+----------------
+
+- Fixed wrong kupu styles.
+  [tmassman]
+
+- Added iFrame support (use 'prettyPhoto Iframe Link' for external sites)
+  [tmassman]
+
+
+0.1 (2009-12-29)
+----------------
+
+- Initial release
+  [tmassman]
+

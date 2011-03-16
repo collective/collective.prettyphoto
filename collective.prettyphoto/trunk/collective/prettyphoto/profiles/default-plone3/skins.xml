@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<object name="portal_skins">
+    <object name="collective_prettyphoto"
+            meta_type="Filesystem Directory View"
+            directory="collective.prettyphoto:skins/collective_prettyphoto" />
+    <skin-path name="*">
+        <layer name="collective_prettyphoto" insert-after="custom" />
+    </skin-path>
+</object>

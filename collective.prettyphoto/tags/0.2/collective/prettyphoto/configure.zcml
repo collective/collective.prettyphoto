@@ -1,0 +1,39 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="collective.prettyphoto">
+
+    <five:registerPackage package="." initialize=".initialize" />
+
+    <include package=".browser" />
+    <include file="skins.zcml" />
+
+    <!-- Register the installation GenericSetup extension profile -->
+    <genericsetup:registerProfile
+        name="default"
+        title="collective.prettyphoto"
+        directory="profiles/default"
+        description="prettyPhoto (Lightweight jQuery Lightbox clone)"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+
+    <genericsetup:importStep
+        name="collective.prettyphoto"
+        title="prettyPhoto configuration"
+        description="Configures Kupu pagraph styles for prettyPhoto"
+        handler="collective.prettyphoto.exportimport.import_various">
+        <depends name="kupu" />
+    </genericsetup:importStep>
+
+    <genericsetup:upgradeStep
+        title="Upgrade collective.prettyphoto"
+        description="Removes wrong styles from kupu styles menu"
+        source="0.1"
+        destination="0.2"
+        handler=".migration.migrateTo02"
+        sortkey="1"
+        profile="collective.prettyphoto:default"
+    />  
+
+</configure>

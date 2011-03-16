@@ -1,0 +1,37 @@
+Changelog
+=========
+
+0.3.1 (2010-05-19)
+------------------
+
+- Fixed version numbers and missing upgrade steps.
+  [tmassman]
+
+- Added custom browserlayer.
+  [tmassman]
+
+- Upgrade to prettyPhoto 2.5.6
+  [tmassman]
+
+0.3 (2010-05-17)
+----------------
+
+- Don't fail when installing on sites w/o kupu (plone4 compatibility).
+  [fRiSi]
+
+0.2 (2010-01-03)
+----------------
+
+- Fixed wrong kupu styles.
+  [tmassman]
+
+- Added iFrame support (use 'prettyPhoto Iframe Link' for external sites)
+  [tmassman]
+
+
+0.1 (2009-12-29)
+----------------
+
+- Initial release
+  [tmassman]
+

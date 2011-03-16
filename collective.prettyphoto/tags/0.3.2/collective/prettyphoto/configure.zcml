@@ -1,0 +1,89 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="collective.prettyphoto">
+
+    <five:registerPackage package="." initialize=".initialize" />
+
+    <include package=".browser" />
+    <include file="skins.zcml" />
+
+    <!-- profiles -->
+    <genericsetup:registerProfile zcml:condition="have plone-4"
+        name="default"
+        title="collective.prettyphoto"
+        directory="profiles/default"
+        description="prettyPhoto (Lightweight jQuery Lightbox clone)"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+
+    <genericsetup:registerProfile zcml:condition="not-have plone-4"
+        name="default"
+        title="collective.prettyphoto"
+        directory="profiles/default-plone3"
+        description="prettyPhoto (Lightweight jQuery Lightbox clone)"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+
+    <genericsetup:registerProfile
+        name="uninstall"
+        title="Uninstall prettyPhoto"
+        directory="profiles/uninstall"
+        description="An uninstall profile for the prettyPhoto extension."
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+
+    <!-- import steps -->
+    <genericsetup:importStep
+        name="collective.prettyphoto"
+        title="prettyPhoto configuration"
+        description="Configures Kupu pagraph styles for prettyPhoto"
+        handler="collective.prettyphoto.exportimport.import_various">
+        <depends name="kupu" />
+    </genericsetup:importStep>
+
+    <!-- upgrades -->
+    <genericsetup:upgradeStep
+        title="Upgrade collective.prettyphoto"
+        description="Removes wrong styles from kupu styles menu"
+        source="0.1"
+        destination="0.2"
+        handler=".migration.migrateTo02"
+        sortkey="1"
+        profile="collective.prettyphoto:default"
+    />  
+
+    <genericsetup:upgradeStep
+        title="Upgrade collective.prettyphoto"
+        description="Empty upgrade step"
+        source="0.2"
+        destination="0.3"
+        handler=".migration.emptyMigrate"
+        sortkey="2"
+        profile="collective.prettyphoto:default"
+    />  
+
+    <genericsetup:upgradeStep
+        title="Upgrade collective.prettyphoto"
+        description="Add new custom browser layer"
+        source="0.3"
+        destination="0.3.1"
+        handler=".migration.migrateTo031"
+        sortkey="3"
+        profile="collective.prettyphoto:default"
+    />  
+
+    <genericsetup:upgradeStep
+        title="Upgrade collective.prettyphoto"
+        description="Empty upgrade step"
+        source="0.3.1"
+        destination="1"
+        handler=".migration.emptyMigrate"
+        sortkey="4"
+        profile="collective.prettyphoto:default"
+    />  
+
+</configure>

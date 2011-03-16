@@ -1,0 +1,22 @@
+Changelog
+=========
+
+0.3 (2010-05-17)
+----------------
+
+- don't fail when installing on sites w/o kupu (plone4 compatibility)
+  [fRiSi]
+
+0.2 (2010-01-03)
+----------------
+
+- Fixed wrong kupu styles
+
+- Added iFrame support (use 'prettyPhoto Iframe Link' for external sites)
+
+
+0.1 (2009-12-29)
+---------------
+
+- Initial release
+

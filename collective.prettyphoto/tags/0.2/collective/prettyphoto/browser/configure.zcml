@@ -1,0 +1,51 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="collective.prettyphoto">
+
+    <browser:resource
+        name="jquery.prettyPhoto.js"
+        file="javascript/jquery.prettyPhoto.compressed.js" />
+
+    <!-- Enable the uncompressed version if you have any problems with
+         the javascript. -->
+    <!--
+    <browser:resource
+        name="jquery.prettyPhoto.js"
+        file="javascript/jquery.prettyPhoto.js" />
+    -->
+
+    <browser:resource
+        name="prettyPhoto.css"
+        file="css/prettyPhoto.css" />
+
+    <!-- Activate prettyPhoto for 'prettyPhoto'-tagged elements -->
+    <browser:page
+        name="prettyPhoto.js"
+        for="*"
+        class=".view.JavaScript"
+        permission="zope2.View"
+    />
+
+    <!-- prettyPhoto images -->
+    <browser:resourceDirectory
+        name="prettyPhoto.dark_rounded"
+        directory="images/dark_rounded" />
+
+    <browser:resourceDirectory
+        name="prettyPhoto.dark_square"
+        directory="images/dark_square" />
+
+    <browser:resourceDirectory
+        name="prettyPhoto.facebook"
+        directory="images/facebook" />
+
+    <browser:resourceDirectory
+        name="prettyPhoto.light_rounded"
+        directory="images/light_rounded" />
+
+    <browser:resourceDirectory
+        name="prettyPhoto.light_square"
+        directory="images/light_square" />
+
+</configure>

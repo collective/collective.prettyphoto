@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<import-steps>
+    
+    <import-step id="collective.prettyphoto.reset-layers"
+        version="20100519-01"
+        handler="collective.prettyphoto.setuphandlers.resetLayers"
+        title="Remove prettyPhoto related browser layer.">
+        Removes prettyPhoto related browser layer.
+    </import-step>
+    
+</import-steps>
