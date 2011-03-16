@@ -1,1 +1,0 @@
-see collective/prettyphoto/README.txt
