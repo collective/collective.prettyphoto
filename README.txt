@@ -90,7 +90,7 @@ collective.prettyphoto can be customized via property sheet (go to ZMI, portal_p
 
 * iframe_height: the height of the iframe (must be percantage, default: 75%)
 
-* overlay_gallery: If set to true, a gallery will overlay the fullscreen image on mouse over (default: False, the bug (http://bit.ly/eKYdrF) is fixed since 4.1 (pP 3.0.3) but your image url has to contain (jpg|jpeg|png|gif) somewhere)
+* overlay_gallery: If set to true, a gallery will overlay the fullscreen image on mouse over (default: False, the bug (http://bit.ly/eKYdrF) is fixed since 0.4.1 (pP 3.0.3) but your image url has to contain (jpg|jpeg|png|gif) somewhere)
 
 * slideshow: false OR interval time in ms (default: False)
 
