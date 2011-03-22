@@ -1,20 +1,32 @@
 Changelog
 =========
 
+0.4.1 (2011-03-22)
+------------------
+
+- Upgraded to prettyPhoto 3.0.3 .
+  This fixes thumbnails in overlay_gallery partly because the regular expression
+  now looks for a (jpg|jpeg|png|gif) within the whole url. if your originaly
+  linked images are completely without this, they still wont show up.
+  [petschki]
+
+- fixed overlay_gallery property defaults to "False"
+  [petschki]
+
 0.4.0 (2011-02-23)
 ------------------
 
 - Upgraded to prettyPhoto library including it's css and image sprite to 3.0.1
-  to fix issues with jQuery 1.4.4 (see http://bit.ly/hxYUrt) which is shipped 
+  to fix issues with jQuery 1.4.4 (see http://bit.ly/hxYUrt) which is shipped
   with latest Plone 4 by default. This fixes #2.
   [saily]
-  
+
 - Added default thumbnails for 'overlay_galleries' feature.
   [saily]
 
 - Added 'overlay_gallery' and 'slideshow' as additional configuration options
   but disabled by default cause of a bug in jquery.prettyPhoto.js which avoids
-  displaying thumbnails not ending on (jpg|jpeg|png|gif). 
+  displaying thumbnails not ending on (jpg|jpeg|png|gif).
   See http://bit.ly/eKYdrF
   [saily]
 
