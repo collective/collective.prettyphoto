@@ -14,18 +14,20 @@ class JavaScript(BrowserView):
            portal_properties."""
         self.request.response.setHeader("Content-type", "text/javascript")
 
-        return """jq(document).ready(function(){
-            jq(document).ready(function(){
+        social_tools = getattr(self.prettyphoto_properties, 'social_tools', '')
+
+        return """(function($) {
+            $(function() {
                 // add rel tag for all links with class 'prettyPhoto'
-                jq("a.prettyPhoto").attr({"rel": "prettyPhoto"});
+                $("a.prettyPhoto").attr({"rel": "prettyPhoto"});
 
                 // add iframe attributes for all links with class 'prettyPhotoIframe'
-                jq("a.prettyPhotoIframe").attr("href", function() {
+                $("a.prettyPhotoIframe").attr("href", function() {
                     return this.href + "?iframe=true&width=%(iframe_width)s&height=%(iframe_height)s";
                 }).attr({"rel": "prettyPhoto"});
 
                 // enable prettyPhoto
-                jq("a[rel^='prettyPhoto']").prettyPhoto({
+                $("a[rel^='prettyPhoto']").prettyPhoto({
                     animationSpeed: '%(speed)s', /* fast/slow/normal */
                     opacity: %(opacity)s, /* Value between 0 and 1 */
                     showTitle: %(show_title)s, /* true/false */
@@ -33,10 +35,12 @@ class JavaScript(BrowserView):
                     theme: '%(theme)s',
                     autoplay: %(autoplay)s, /* Automatically start videos: True/False */
                     slideshow: %(slideshow)s, /* false OR interval time in ms */
-                    overlay_gallery: %(overlay_gallery)s /* If set to true, a gallery will overlay the fullscreen image on mouse over */
+                    overlay_gallery: %(overlay_gallery)s, /* If set to true, a gallery will overlay the fullscreen image on mouse over */
+                    social_tools: %(social_tools)s, /* html markup for social tool icons */
+                    deeplinking: %(deeplinking)s /* allow prettyphoto to rewrite url for direktlinking to an image */
                 });
             });
-        });
+        })(jQuery);
         """ % dict(speed=getattr(self.prettyphoto_properties, 'speed', 'normal'),
                    opacity=getattr(self.prettyphoto_properties, 'opacity', '0.80'),
                    show_title=getattr(self.prettyphoto_properties, 'show_title', True) and 'true' or 'false',
@@ -47,4 +51,6 @@ class JavaScript(BrowserView):
                    iframe_height=getattr(self.prettyphoto_properties, 'iframe_height', '75%'),
                    overlay_gallery=getattr(self.prettyphoto_properties, 'overlay_gallery', False) and 'true' or 'false',
                    slideshow=getattr(self.prettyphoto_properties, 'slideshow', 0) or 'false',
+                   social_tools=social_tools and "'%s'" % social_tools or 'false',
+                   deeplinking=getattr(self.prettyphoto_properties, 'deeplinking', False) and 'true' or 'false',
               )

@@ -1,14 +1,14 @@
-jq(document).ready(function(){
-    jq(document).ready(function(){
+(function($) {
+    $(function() {
         // add rel tag for all links with class 'prettyPhoto'
-        jq("a.prettyPhoto").attr({"rel": "prettyPhoto"});
+        $("a.prettyPhoto").attr({"rel": "prettyPhoto"});
 
         // add iframe attributes for all links with class 'prettyPhotoIframe'
-        jq("a.prettyPhotoIframe").attr("href", function() { 
+        $("a.prettyPhotoIframe").attr("href", function() {
             return this.href + "?iframe=true&width=75%&height=75%";
         }).attr({"rel": "prettyPhoto"});
 
         // enable prettyPhoto
-        jq("a[rel^='prettyPhoto']").prettyPhoto({theme:'light_rounded'});
+        $("a[rel^='prettyPhoto']").prettyPhoto({theme:'light_rounded'});
     });
-});
+})(jQuery);

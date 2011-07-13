@@ -94,6 +94,11 @@ collective.prettyphoto can be customized via property sheet (go to ZMI, portal_p
 
 * slideshow: false OR interval time in ms (default: False)
 
+* deeplinking: rewrite the browser location to enable directlinks to overlay images (default: False)
+
+* social_tools: html markup for social links within image overlays (twitter, FB, ...) (default: empty) see http://bit.ly/pDQ19A for detailed information
+
+
 Copyright and Credits
 =====================
 

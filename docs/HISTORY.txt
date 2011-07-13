@@ -1,8 +1,12 @@
 Changelog
 =========
 
-0.4.2 (unreleased)
+0.4.2 (2011-07-13)
 ------------------
+
+- Upgraded to prettyPhoto 3.1.2 and implemented two new properties:
+  deeplinking , social_tools
+  [petschki]
 
 0.4.1 (2011-03-22)
 ------------------

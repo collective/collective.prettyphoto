@@ -16,6 +16,8 @@ _PROPERTIES = [
     dict(name='iframe_height', type_='string', value='75%'),
     dict(name='overlay_gallery', type_='boolean', value=False),
     dict(name='slideshow', type_='int', value=0),
+    dict(name='deeplinking', type_='boolean', value=False),
+    dict(name='social_tools', type_='string', value=''),
 ]
 
 
