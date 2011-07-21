@@ -4,6 +4,14 @@ Changelog
 0.4.3 (unreleased)
 ------------------
 
+- Fixed parameter names used to configure prettyPhoto
+  and added autoplay_slideshow.
+
+  Previously titles have been shown although ``show_title`` has been set to
+  ``False`` in ``prettyphoto_properties``.
+  [fRiSi]
+
+
 0.4.2 (2011-07-13)
 ------------------
 

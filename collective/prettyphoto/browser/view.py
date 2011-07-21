@@ -16,6 +16,13 @@ class JavaScript(BrowserView):
 
         social_tools = getattr(self.prettyphoto_properties, 'social_tools', '')
 
+
+        slideshowInterval = getattr(self.prettyphoto_properties, 'slideshow', 0)
+        autoplaySlideshow = getattr(self.prettyphoto_properties, 'autoplay_slideshow', False)
+        if slideshowInterval <= 0:
+            # automatically starting the slideshow does only make sense if the interval is greater than 0
+            autoplaySlideshow = False
+
         return """(function($) {
             $(function() {
                 // add rel tag for all links with class 'prettyPhoto'
@@ -28,12 +35,13 @@ class JavaScript(BrowserView):
 
                 // enable prettyPhoto
                 $("a[rel^='prettyPhoto']").prettyPhoto({
-                    animationSpeed: '%(speed)s', /* fast/slow/normal */
+                    animation_speed: '%(speed)s', /* fast/slow/normal */
                     opacity: %(opacity)s, /* Value between 0 and 1 */
-                    showTitle: %(show_title)s, /* true/false */
+                    show_title: %(show_title)s, /* true/false */
                     counter_separator_label: '%(counter_sep)s', /* The separator for the gallery counter 1 "of" 2 */
                     theme: '%(theme)s',
-                    autoplay: %(autoplay)s, /* Automatically start videos: True/False */
+                    autoplay: %(autoplay)s, /* Automatically start videos: true/false */
+                    autoplay_slideshow: %(autoplay_slideshow)s,
                     slideshow: %(slideshow)s, /* false OR interval time in ms */
                     overlay_gallery: %(overlay_gallery)s, /* If set to true, a gallery will overlay the fullscreen image on mouse over */
                     social_tools: %(social_tools)s, /* html markup for social tool icons */
@@ -50,7 +58,8 @@ class JavaScript(BrowserView):
                    iframe_width=getattr(self.prettyphoto_properties, 'iframe_width', '75%'),
                    iframe_height=getattr(self.prettyphoto_properties, 'iframe_height', '75%'),
                    overlay_gallery=getattr(self.prettyphoto_properties, 'overlay_gallery', False) and 'true' or 'false',
-                   slideshow=getattr(self.prettyphoto_properties, 'slideshow', 0) or 'false',
+                   slideshow=slideshowInterval or 'false',
+                   autoplay_slideshow=autoplaySlideshow  and 'true' or 'false',
                    social_tools=social_tools and "'%s'" % social_tools or 'false',
                    deeplinking=getattr(self.prettyphoto_properties, 'deeplinking', False) and 'true' or 'false',
               )

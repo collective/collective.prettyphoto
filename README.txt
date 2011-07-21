@@ -92,7 +92,9 @@ collective.prettyphoto can be customized via property sheet (go to ZMI, portal_p
 
 * overlay_gallery: If set to true, a gallery will overlay the fullscreen image on mouse over (default: False, the bug (http://bit.ly/eKYdrF) is fixed since 0.4.1 (pP 3.0.3) but your image url has to contain (jpg|jpeg|png|gif) somewhere)
 
-* slideshow: false OR interval time in ms (default: False)
+* slideshow: interval time in ms, 0 to disable slideshow (default: 0)
+
+* autoplay_slideshow: automatically start slideshow? (default: False, only woks when slideshow > 0)
 
 * deeplinking: rewrite the browser location to enable directlinks to overlay images (default: False)
 

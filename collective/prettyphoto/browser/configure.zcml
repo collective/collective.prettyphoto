@@ -3,20 +3,11 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="collective.prettyphoto">
 
-
     <browser:resource
         name="jquery.prettyPhoto.js"
-        file="javascript/jquery.prettyPhoto.compressed.js"
+        file="javascript/jquery.prettyPhoto.js"
         layer="..interfaces.IPrettyPhotoSpecific"
     />
-
-    <!-- Enable the uncompressed version if you have any problems with
-         the javascript. -->
-    <!--
-    <browser:resource
-        name="jquery.prettyPhoto.js"
-        file="javascript/jquery.prettyPhoto.js" />
-    -->
 
     <browser:resource
         name="prettyPhoto.css"

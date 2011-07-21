@@ -12,6 +12,7 @@ _PROPERTIES = [
     dict(name='counter_sep', type_='string', value='/'),
     dict(name='theme', type_='string', value='light_rounded'),
     dict(name='autoplay', type_='boolean', value=True),
+    dict(name='autoplay_slideshow', type_='boolean', value=False),
     dict(name='iframe_width', type_='string', value='75%'),
     dict(name='iframe_height', type_='string', value='75%'),
     dict(name='overlay_gallery', type_='boolean', value=False),
