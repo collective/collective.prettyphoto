@@ -11,6 +11,9 @@ Changelog
   ``False`` in ``prettyphoto_properties``.
   [fRiSi]
 
+- Finish update to 3.1.2 by updating css and images and adding the new `pp_default`
+  theme (which is the new default btw ;-)
+  [fRiSi]
 
 0.4.2 (2011-07-13)
 ------------------

@@ -15,7 +15,7 @@ This plugin has been tested and is known to work in the following browsers
 
 * Internet Explorer 6.0+
 
-`collective.prettyphoto` integrates prettyPhoto 3.0.1 into Plone.
+`collective.prettyphoto` integrates prettyPhoto 3.1.2 into Plone.
 
 Installing
 ==========
@@ -60,13 +60,15 @@ collective.prettyphoto can be customized via property sheet (go to ZMI, portal_p
 
 * theme:
 
+  * pp_default (default)
+
   * dark_rounded
 
   * dark_square
 
   * facebook
 
-  * light_rounded (default)
+  * light_rounded
 
   * light_square
 

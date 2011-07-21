@@ -26,6 +26,12 @@
 
     <!-- prettyPhoto images -->
     <browser:resourceDirectory
+        name="prettyPhoto.default"
+        directory="images/default"
+        layer="..interfaces.IPrettyPhotoSpecific"
+    />
+
+    <browser:resourceDirectory
         name="prettyPhoto.dark_rounded"
         directory="images/dark_rounded"
         layer="..interfaces.IPrettyPhotoSpecific"

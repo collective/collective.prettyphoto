@@ -10,7 +10,7 @@ _PROPERTIES = [
     dict(name='opacity', type_='string', value='0.80'),
     dict(name='show_title', type_='boolean', value=True),
     dict(name='counter_sep', type_='string', value='/'),
-    dict(name='theme', type_='string', value='light_rounded'),
+    dict(name='theme', type_='string', value='pp_default'),
     dict(name='autoplay', type_='boolean', value=True),
     dict(name='autoplay_slideshow', type_='boolean', value=False),
     dict(name='iframe_width', type_='string', value='75%'),
