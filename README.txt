@@ -1,26 +1,28 @@
 Introduction
 ============
 
-prettyPhoto is a jQuery based lightbox clone. Not only does it support images, it also add support for videos, flash, YouTube, iFrames. It's a full blown media lightbox. The setup is easy and quick, plus the script is compatible in every major browser.
+prettyPhoto is a jQuery based lightbox clone. Not only does it support images,
+it also add support for videos, flash, YouTube, iFrames and ajax.
+
+It's a full blown media lightbox. The setup is easy and quick, plus the script is compatible in every major browser.
 
 The original implementation can be found here: http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/
 
-This plugin has been tested and is known to work in the following browsers
+This plugin has been tested and is known to work in the following browsers:
 
-* Firefox 2.0+
-
+* Firefox 3.0+
+* Google Chrome 10.0+
+* Internet Explorer 6.0+
 * Safari 3.1.1+
-
 * Opera 9+
 
-* Internet Explorer 6.0+
 
 `collective.prettyphoto` integrates prettyPhoto 3.1.2 into Plone.
 
 Installing
 ==========
 
-This package requires Plone 3.x or later (tested on 3.3.5 and 4.0.3).
+This package requires Plone 3.x or later (tested on 3.3.5 and 4.0.7).
 
 Installing without buildout
 ---------------------------
