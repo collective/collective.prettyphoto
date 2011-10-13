@@ -45,7 +45,8 @@ class JavaScript(BrowserView):
                     slideshow: %(slideshow)s, /* false OR interval time in ms */
                     overlay_gallery: %(overlay_gallery)s, /* If set to true, a gallery will overlay the fullscreen image on mouse over */
                     social_tools: %(social_tools)s, /* html markup for social tool icons */
-                    deeplinking: %(deeplinking)s /* allow prettyphoto to rewrite url for direktlinking to an image */
+                    deeplinking: %(deeplinking)s, /* allow prettyphoto to rewrite url for direktlinking to an image */
+                    markup: %(markup)s
                 });
             });
         })(jQuery);
@@ -62,4 +63,16 @@ class JavaScript(BrowserView):
                    autoplay_slideshow=autoplaySlideshow  and 'true' or 'false',
                    social_tools=social_tools and "'%s'" % social_tools or 'false',
                    deeplinking=getattr(self.prettyphoto_properties, 'deeplinking', False) and 'true' or 'false',
+                   markup=self.markup() or 'undefined',
               )
+
+    def markup(self):
+        """subclasses can overwrite this to provide another default markup
+        for the overlay.
+
+        eg:
+        return '''"<div class="pp_pic_holder"> \\
+            <div class="pp_top"> \\
+            ..." '''
+        """
+        return None

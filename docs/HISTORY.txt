@@ -1,6 +1,14 @@
 Changelog
 =========
 
+after 0.4.3
+-----------
+
+- Added possiblity to provide custom markup by subclassing the
+  view that creates the prettyphoto configuration.
+  (see ``browser.view.Javascript.markup``)
+  [fRiSi]
+
 0.4.3 (2011-07-22)
 ------------------
 
