@@ -42,7 +42,7 @@
         title="prettyPhoto configuration"
         description="Configures Kupu pagraph styles for prettyPhoto"
         handler="collective.prettyphoto.exportimport.import_various">
-        <depends name="kupu" />
+        <depends name="kupu-setup" />
     </genericsetup:importStep>
 
     <!-- upgrades -->
