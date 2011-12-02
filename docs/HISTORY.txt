@@ -1,8 +1,8 @@
 Changelog
 =========
 
-after 0.4.3
------------
+0.4.4 (2011-12-02)
+------------------
 
 - Added possiblity to provide custom markup by subclassing the
   view that creates the prettyphoto configuration.
