@@ -1,0 +1,15 @@
+bin/
+.*.cfg
+develop-eggs/
+devsrc
+dist
+eggs/
+parts/
+.project
+*.pyc
+.pydevproject
+*.pyo
+.settings
+*.egg-info
+.tmp*
+var/
