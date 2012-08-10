@@ -1,6 +1,14 @@
 Changelog
 =========
 
+0.4.5 (2012-08-10)
+------------------
+
+- Made it possible to later (i.e. after ajax calls) bind prettyphoto
+  to images. thus we have a global js-function plonePrettyPhotoEnable now.
+  Also did some housekeeping, added integrated buildout, gitignore, ...
+  [jensens]
+
 0.4.4 (2011-12-02)
 ------------------
 

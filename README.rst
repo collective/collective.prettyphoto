@@ -114,10 +114,8 @@ Author of collective.prettyphoto: Thomas Massmann (thomas.massmann@inqbus.de).
 
 Contributors (alphabetically)
 
- * fRiSi
-
- * hpeteragitator
-
- * petschki
-
- * saily
+* fRiSi
+* hpeteragitator
+* jensens
+* petschki
+* saily
