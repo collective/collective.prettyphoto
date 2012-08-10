@@ -23,8 +23,9 @@ class JavaScript(BrowserView):
             # automatically starting the slideshow does only make sense if the interval is greater than 0
             autoplaySlideshow = False
 
-        return """(function($) {
-            $(function() {
+        return """\
+        (function($) {
+            var plonePrettyPhotoEnable = function () {
                 // add rel tag for all links with class 'prettyPhoto'
                 $("a.prettyPhoto").attr({"rel": "prettyPhoto"});
 
@@ -48,6 +49,11 @@ class JavaScript(BrowserView):
                     deeplinking: %(deeplinking)s, /* allow prettyphoto to rewrite url for direktlinking to an image */
                     markup: %(markup)s
                 });
+            };
+
+            $(function() {
+                // enable prettyPhoto on document load
+                plonePrettyPhotoEnable();
             });
         })(jQuery);
         """ % dict(speed=getattr(self.prettyphoto_properties, 'speed', 'normal'),
