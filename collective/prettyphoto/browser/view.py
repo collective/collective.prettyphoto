@@ -24,8 +24,9 @@ class JavaScript(BrowserView):
             autoplaySlideshow = False
 
         return """\
+        var plonePrettyPhoto = {};
         (function($) {
-            var plonePrettyPhotoEnable = function () {
+            plonePrettyPhoto.enable = function () {
                 // add rel tag for all links with class 'prettyPhoto'
                 $("a.prettyPhoto").attr({"rel": "prettyPhoto"});
 
@@ -53,7 +54,7 @@ class JavaScript(BrowserView):
 
             $(function() {
                 // enable prettyPhoto on document load
-                plonePrettyPhotoEnable();
+                plonePrettyPhoto.enable();
             });
         })(jQuery);
         """ % dict(speed=getattr(self.prettyphoto_properties, 'speed', 'normal'),
