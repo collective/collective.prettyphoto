@@ -1,7 +1,7 @@
 Changelog
 =========
 
-(unreleased)
+0.4.5 (unreleased)
 ------------------
   
 - corrected the global js-function 
