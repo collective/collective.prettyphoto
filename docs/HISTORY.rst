@@ -1,9 +1,11 @@
 Changelog
 =========
 
-0.4.6 (unreleased)
-------------------
+0.4.5.1 (unreleased)
+--------------------
   
+- fix bug with sdist packaging 
+  [jensens]
 
 0.4.5 (2012-09-11)
 ------------------
