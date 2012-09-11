@@ -1,7 +1,11 @@
 Changelog
 =========
 
-0.4.5 (unreleased)
+0.4.6 (unreleased)
+------------------
+  
+
+0.4.5 (2012-09-11)
 ------------------
   
 - corrected the global js-function 

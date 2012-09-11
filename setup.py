@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.4.5'
+version = '0.4.6'
 
 setup(name='collective.prettyphoto',
       version=version,
@@ -17,7 +17,7 @@ setup(name='collective.prettyphoto',
       keywords='Plone Lightbox jQuery',
       author='Thomas Massmann',
       author_email='thomas.massmann@inqbus.de',
-      url='http://svn.plone.org/svn/collective/collective.prettyphoto',
+      url='https://github.com/collective/collective.prettyphoto',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['collective'],
