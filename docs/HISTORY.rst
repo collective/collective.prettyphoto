@@ -1,7 +1,10 @@
 Changelog
 =========
 
-0.4.5.1 (unreleased)
+0.4.6 (unreleased)
+--------------------
+  
+0.4.5.1 (2012-09-12)
 --------------------
   
 - fix bug with sdist packaging 
