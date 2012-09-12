@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.4.5.1'
+version = '0.4.6'
 
 setup(name='collective.prettyphoto',
       version=version,
