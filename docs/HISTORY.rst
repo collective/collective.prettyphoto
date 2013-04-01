@@ -4,6 +4,14 @@ Changelog
 0.5 (unreleased)
 ----------------
 
+- Add travis integration for Plone 4.3.x, Plone 4.2.x, Plone 4.1.x and
+  Plone 4.0.x. Plone 3.3.x cannot be tested with new layered testing structure
+  of ``plone.app.testing`` and will never be testable on travis because they
+  don't and will never support Python 2.4.
+
+  So we changed primary focus of development to Plone >= 4.0.
+  [saily]
+
 - Switchted to ``plone.app.testing`` and added some basic installation tests.
   [saily]
 
