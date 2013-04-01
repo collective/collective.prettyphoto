@@ -70,13 +70,13 @@ Open prettyPhoto Gallery
     Click Link  xpath=//a[@rel="prettyPhoto[gallery]"][1]
     Wait Until keyword succeeds  0.5  4  Element Should Be Visible  css=div.pp_pic_holder
 
-    Sleep  1  # Let popup come up
+    Sleep  2  # Let prettyPhoto come up
 
 Click On prettyPhoto Controls
     [Arguments]  ${elementClassname}
 
     Click Element  css=a.${elementClassname}
-    Sleep  1  # Let image change
+    Sleep  2  # Let image change
     Element Should Be Visible  css=#fullResImage
 
 Click On Next in prettyPhoto Gallery
@@ -93,7 +93,8 @@ Be Sure prettyPhoto Shows Image
 
 Close prettyPhoto Gallery
     Click Element  css=a.pp_close
-    Wait Until keyword succeeds  1  5  Element Should Not Be Visible  css=div.pp_pic_holder
+    Sleep  2  # Let prettyPhoto close
+    Element Should Not Be Visible  css=div.pp_pic_holder
 
 prettyPhoto URL Should Contain
     [Arguments]  ${imageId}
