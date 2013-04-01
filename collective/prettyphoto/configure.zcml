@@ -48,8 +48,15 @@
         provides="Products.GenericSetup.interfaces.EXTENSION"
     />
 
+    <genericsetup:registerProfile
+        name="extended"
+        title="prettyPhoto base gs setps"
+        directory="profiles/extended"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+
     <!-- import steps -->
-    <genericsetup:importStep
+    <genericsetup:importStep zcml:condition="installed Products.kupu"
         name="collective.prettyphoto"
         title="prettyPhoto configuration"
         description="Configures Kupu pagraph styles for prettyPhoto"

@@ -8,6 +8,12 @@ Changelog
   GS profile which appends prettyphoto views to Collection instead Topic type.
   [saily]
 
+- Refactor GS profiles and depend each profile on a 'extended' profile which
+  hold generic stuff as registering css and js. Generic setup takes the first
+  profile which is found in folder, so this has to be alpha-sorted behind
+  'default'.
+  [saily]
+
 
 0.4.5.2 (2012-09-12)
 --------------------
