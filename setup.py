@@ -1,19 +1,30 @@
+# -*- coding: utf-8 -*-
 from setuptools import setup, find_packages
 import os
 
-version = '0.4.6'
+
+def read(*paths):
+    return open(os.path.join(os.path.dirname(__file__), *paths)).read()
+
+version = '0.5dev'
 
 setup(name='collective.prettyphoto',
       version=version,
       description="prettyPhoto integration for Plone.",
-      long_description=open("README.rst").read() + "\n\n" +
-                       open(os.path.join("docs", "HISTORY.rst")).read(),
+      long_description='\n\n'.join([
+          read("README.rst"),
+          read("docs", "HISTORY.rst"),
+      ]),
       # Get more strings from
       # http://pypi.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
-        "Framework :: Plone",
-        "Programming Language :: Python",
-        ],
+          "Framework :: Plone :: 3.3",
+          "Framework :: Plone :: 4.0",
+          "Framework :: Plone :: 4.1",
+          "Framework :: Plone :: 4.2",
+          "Framework :: Plone :: 4.3",
+          "Programming Language :: Python",
+      ],
       keywords='Plone Lightbox jQuery',
       author='Thomas Massmann',
       author_email='thomas.massmann@inqbus.de',

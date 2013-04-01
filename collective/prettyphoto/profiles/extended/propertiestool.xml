@@ -2,6 +2,6 @@
 <object name="portal_properties">
     <object name="prettyphoto_properties" meta_type="Plone Property Sheet">
         <property name="title">prettyPhoto properties</property>
-        <!-- properties are set in exportimport.py -->  
+        <!-- properties are set in exportimport.py -->
     </object>
 </object>
