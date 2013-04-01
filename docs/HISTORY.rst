@@ -4,6 +4,9 @@ Changelog
 0.5 (unreleased)
 ----------------
 
+- Upgrade to prettyPhoto 3.1.5
+  [saily]
+
 - Add ui-tests using robotframework to validate views.
   [saily]
 
