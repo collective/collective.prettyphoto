@@ -4,6 +4,9 @@ Changelog
 0.5 (unreleased)
 ----------------
 
+- Switchted to ``plone.app.testing`` and added some basic installation tests.
+  [saily]
+
 - Add egg-containing buildout and bootstrap.py
   [saily]
 
