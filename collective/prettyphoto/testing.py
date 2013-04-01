@@ -39,7 +39,7 @@ class PrettyPhotoLayer(PloneSandboxLayer):
                                            ['Manager'],
                                            [])
         login(portal, 'admin')
-        portal.portal_workflow.setDefaultChain("simple_publication_workflow")
+        portal.portal_workflow.setDefaultChain("one_state_workflow")
 
         setRoles(portal, TEST_USER_ID, ['Manager'])
 
@@ -48,8 +48,19 @@ class PrettyPhotoLayer(PloneSandboxLayer):
                              id="test-folder", title=u"Test Folder")
 
         # Add a Collection
-        portal.invokeFactory(HAS_COLLECTION and 'Collection' or 'Topic',
-                             id="test-collection", title=u"Test Collection")
+        if HAS_COLLECTION:
+            portal.invokeFactory('Collection',
+                                 id="test-collection",
+                                 title=u"Test Collection")
+
+            query = [{
+                'i': 'Type',
+                'o': 'plone.app.querystring.operation.string.is',
+                'v': 'Image',
+            }]
+
+            # set the query and publish the collection
+            portal['test-collection'].setQuery(query)
 
 
 COLLECTIVE_PRETTYPHOTO_FIXTURE = PrettyPhotoLayer()

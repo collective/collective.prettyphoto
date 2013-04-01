@@ -4,6 +4,9 @@ Changelog
 0.5 (unreleased)
 ----------------
 
+- Add ui-tests using robotframework to validate views.
+  [saily]
+
 - Add travis integration for Plone 4.3.x, Plone 4.2.x, Plone 4.1.x and
   Plone 4.0.x. Plone 3.3.x cannot be tested with new layered testing structure
   of ``plone.app.testing`` and will never be testable on travis because they
