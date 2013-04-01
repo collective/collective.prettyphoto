@@ -11,13 +11,25 @@
     <include file="skins.zcml" />
 
     <!-- profiles -->
-    <genericsetup:registerProfile zcml:condition="have plone-4"
-        name="default"
-        title="collective.prettyphoto"
-        directory="profiles/default"
-        description="prettyPhoto (Lightweight jQuery Lightbox clone)"
-        provides="Products.GenericSetup.interfaces.EXTENSION"
-    />
+    <configure zcml:condition="have plone-4">
+        <genericsetup:registerProfile
+            name="default"
+            title="collective.prettyphoto"
+            directory="profiles/default"
+            description="prettyPhoto (Lightweight jQuery Lightbox clone)"
+            provides="Products.GenericSetup.interfaces.EXTENSION"
+            zcml:condition="installed plone.app.collection"
+        />
+
+        <genericsetup:registerProfile
+            name="default"
+            title="collective.prettyphoto"
+            directory="profiles/default-topic"
+            description="prettyPhoto (Lightweight jQuery Lightbox clone)"
+            provides="Products.GenericSetup.interfaces.EXTENSION"
+            zcml:condition="not-installed plone.app.collection"
+        />
+    </configure>
 
     <genericsetup:registerProfile zcml:condition="not-have plone-4"
         name="default"
@@ -55,7 +67,7 @@
         handler=".migration.migrateTo02"
         sortkey="1"
         profile="collective.prettyphoto:default"
-    />  
+    />
 
     <genericsetup:upgradeStep
         title="Upgrade collective.prettyphoto"
@@ -65,7 +77,7 @@
         handler=".migration.emptyMigrate"
         sortkey="2"
         profile="collective.prettyphoto:default"
-    />  
+    />
 
     <genericsetup:upgradeStep
         title="Upgrade collective.prettyphoto"
@@ -75,7 +87,7 @@
         handler=".migration.migrateTo031"
         sortkey="3"
         profile="collective.prettyphoto:default"
-    />  
+    />
 
     <genericsetup:upgradeStep
         title="Upgrade collective.prettyphoto"
@@ -85,6 +97,6 @@
         handler=".migration.emptyMigrate"
         sortkey="4"
         profile="collective.prettyphoto:default"
-    />  
+    />
 
 </configure>

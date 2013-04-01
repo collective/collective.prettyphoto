@@ -1,23 +1,28 @@
 Changelog
 =========
 
-0.4.6 (unreleased)
-------------------
+0.5 (unreleased)
+----------------
+
+- Use ``zcml:condition="installed plone.app.collection"`` to switch to a new
+  GS profile which appends prettyphoto views to Collection instead Topic type.
+  [saily]
+
 
 0.4.5.2 (2012-09-12)
 --------------------
 - more manifest packaging madness
-  
+
 0.4.5.1 (2012-09-12)
 --------------------
-  
-- fix bug with sdist packaging 
+
+- fix bug with sdist packaging
   [jensens]
 
 0.4.5 (2012-09-11)
 ------------------
-  
-- corrected the global js-function 
+
+- corrected the global js-function
   [bennyboy]
 
 - Made it possible to later (i.e. after ajax calls) bind prettyphoto
