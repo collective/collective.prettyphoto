@@ -4,6 +4,9 @@ Changelog
 0.5 (unreleased)
 ----------------
 
+- Add egg-containing buildout and bootstrap.py
+  [saily]
+
 - Use ``zcml:condition="installed plone.app.collection"`` to switch to a new
   GS profile which appends prettyphoto views to Collection instead Topic type.
   [saily]
