@@ -29,14 +29,14 @@ Test prettyPhoto gallery on a folder
     Go to  ${test-folder}
     Add image  Napoli  plone-people-pointing.jpg
     Go to  ${test-folder}
-    Add image  München  plone-konferenz-2012.jpg
+    Add image  Munich  plone-konferenz-2012.jpg
     Go to  ${test-folder}
     Apply prettyPhoto View
     Log out
     Go to  ${test-folder}
     Open prettyPhoto Gallery
     Click On Next In prettyPhoto Gallery
-    Be Sure prettyPhoto Shows Image  munchen  München
+    Be Sure prettyPhoto Shows Image  munich  Munich
     Click On Previous In prettyPhoto Gallery
     Be Sure prettyPhoto Shows Image  napoli  Napoli
     Close prettyPhoto Gallery
