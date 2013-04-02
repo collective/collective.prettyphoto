@@ -9,6 +9,7 @@ env:
     - PLONE_VERSION=4.3
 before_install:
     - sudo apt-get install -y libjpeg-dev libgif-dev libpng-dev libz-dev
+    - pip install https://github.com/python-imaging/Pillow/archive/2.0.0.zip
 install:
     - sed -ie "s#travis-4.x.cfg#travis-$PLONE_VERSION.x.cfg#" travis.cfg
     - mkdir -p buildout-cache/eggs
