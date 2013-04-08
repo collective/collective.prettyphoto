@@ -1,15 +1,23 @@
+*.pyc
+*.pyo
+*.egg-info
+
+.tmp*
+.installed.cfg
+.mr.developer.cfg
+
+# local development
 bin/
-.*.cfg
 develop-eggs/
-devsrc
-dist
 eggs/
 parts/
-.project
-*.pyc
-.pydevproject
-*.pyo
-.settings
-*.egg-info
-.tmp*
+devsrc/
+dist/
 var/
+local.cfg
+.codeintel/
+
+# eclipse files
+.project
+.pydevproject
+.settings
