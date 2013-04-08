@@ -51,7 +51,7 @@ Open Menu
     Element Should Be Visible  css=dl#${elementId} span
     Element Should Not Be Visible  css=dl#${elementId} dd.actionMenuContent
     Click link  css=dl#${elementId} dt.actionMenuHeader a
-    Wait until keyword succeeds  1  5  Element Should Be Visible  css=dl#${elementId} dd.actionMenuContent
+    Wait until keyword succeeds  5s  1s  Element Should Be Visible  css=dl#${elementId} dd.actionMenuContent
 
 Open Add New Menu
     Open Menu  plone-contentmenu-factories
@@ -68,7 +68,7 @@ Apply prettyPhoto View
 
 Open prettyPhoto Gallery
     Click Link  xpath=//a[@rel="prettyPhoto[gallery]"][1]
-    Wait Until keyword succeeds  0.5  4  Element Should Be Visible  css=div.pp_pic_holder
+    Wait Until keyword succeeds  5s  1s  Element Should Be Visible  css=div.pp_pic_holder
 
     Sleep  2  # Let prettyPhoto come up
 
@@ -88,7 +88,7 @@ Click On Previous in prettyPhoto Gallery
 Be Sure prettyPhoto Shows Image
     [Arguments]  ${imageId}  ${imageTitle}
 
-    Wait Until Keyword Succeeds  0.5  4  prettyPhoto URL Should Contain  ${imageId}
+    Wait Until Keyword Succeeds  5s  1s  prettyPhoto URL Should Contain  ${imageId}
     Element Should Contain  css=div.pp_pic_holder div.ppt  ${imageTitle}
 
 Close prettyPhoto Gallery
