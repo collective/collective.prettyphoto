@@ -1,5 +1,5 @@
-.. image:: https://travis-ci.org/saily/collective.prettyphoto.png
-   :target: https://travis-ci.org/saily/collective.prettyphoto
+.. image:: https://travis-ci.org/collective/collective.prettyphoto.png
+   :target: https://travis-ci.org/collective/collective.prettyphoto
 
 .. contents::
 
