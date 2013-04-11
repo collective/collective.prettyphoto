@@ -1,23 +1,54 @@
 Changelog
 =========
 
-0.4.6 (unreleased)
-------------------
+0.5 (unreleased)
+----------------
+
+- Upgrade to prettyPhoto 3.1.5
+  [saily]
+
+- Add ui-tests using robotframework to validate views.
+  [saily]
+
+- Add travis integration for Plone 4.3.x, Plone 4.2.x, Plone 4.1.x and
+  Plone 4.0.x. Plone 3.3.x cannot be tested with new layered testing structure
+  of ``plone.app.testing`` and will never be testable on travis because they
+  don't and will never support Python 2.4.
+
+  So we changed primary focus of development to Plone >= 4.0.
+  [saily]
+
+- Switchted to ``plone.app.testing`` and added some basic installation tests.
+  [saily]
+
+- Add egg-containing buildout and bootstrap.py
+  [saily]
+
+- Use ``zcml:condition="installed plone.app.collection"`` to switch to a new
+  GS profile which appends prettyphoto views to Collection instead Topic type.
+  [saily]
+
+- Refactor GS profiles and depend each profile on a 'extended' profile which
+  hold generic stuff as registering css and js. Generic setup takes the first
+  profile which is found in folder, so this has to be alpha-sorted behind
+  'default'.
+  [saily]
+
 
 0.4.5.2 (2012-09-12)
 --------------------
 - more manifest packaging madness
-  
+
 0.4.5.1 (2012-09-12)
 --------------------
-  
-- fix bug with sdist packaging 
+
+- fix bug with sdist packaging
   [jensens]
 
 0.4.5 (2012-09-11)
 ------------------
-  
-- corrected the global js-function 
+
+- corrected the global js-function
   [bennyboy]
 
 - Made it possible to later (i.e. after ajax calls) bind prettyphoto
