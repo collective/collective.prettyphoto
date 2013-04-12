@@ -1,12 +1,22 @@
 language: python
 python:
-#    - "2.6"
+    - "2.6"
     - "2.7"
 env:
-#    - PLONE_VERSION=4.0
-#    - PLONE_VERSION=4.1
+    - PLONE_VERSION=4.0
+    - PLONE_VERSION=4.1
     - PLONE_VERSION=4.2
     - PLONE_VERSION=4.3
+matrix:
+  exclude:
+    - python: 2.7
+      env: PLONE_VERSION=4.0
+    - python: 2.7
+      env: PLONE_VERSION=4.1
+    - python: 2.6
+      env: PLONE_VERSION=4.2
+    - python: 2.6
+      env: PLONE_VERSION=4.3
 before_install:
     - sudo apt-get install -y libjpeg-dev libgif-dev libpng-dev libz-dev
     - pip install https://github.com/python-imaging/Pillow/archive/2.0.0.zip
