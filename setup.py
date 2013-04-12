@@ -40,7 +40,7 @@ setup(name='collective.prettyphoto',
       ],
       extras_require={
           'test': [
-              'plone.app.testing  [robot]',
+              'plone.app.testing[robot]>=4.2.2',
           ],
       },
       entry_points="""
