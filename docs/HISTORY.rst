@@ -4,6 +4,9 @@ Changelog
 0.5 (unreleased)
 ----------------
 
+- Documentation updates
+  [saily]
+
 - Upgrade to prettyPhoto 3.1.5
   [saily]
 
