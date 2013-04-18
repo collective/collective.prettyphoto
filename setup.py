@@ -6,7 +6,7 @@ import os
 def read(*paths):
     return open(os.path.join(os.path.dirname(__file__), *paths)).read()
 
-version = '0.5dev'
+version = '0.5'
 
 setup(name='collective.prettyphoto',
       version=version,
