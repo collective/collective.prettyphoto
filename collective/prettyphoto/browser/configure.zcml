@@ -24,6 +24,25 @@
         layer="..interfaces.IPrettyPhotoSpecific"
     />
 
+    <!-- Copied from plone.app.collection to make prettyphoto work with new collections -->
+    <browser:page
+        name="prettyPhoto_album_view"
+        permission="zope2.View"
+        for="plone.app.collection.interfaces.ICollection"
+        template="templates/thumbnail_view.pt"
+    />
+
+    <browser:menuItems
+        for="plone.app.collection.interfaces.ICollection"
+        menu="plone_displayviews">
+      
+        <browser:menuItem
+            title="Thumbnail view (prettyPhoto)"
+            action="prettyPhoto_album_view"
+        />
+
+    </browser:menuItems>
+    
     <!-- prettyPhoto images -->
     <browser:resourceDirectory
         name="prettyPhoto.default"
