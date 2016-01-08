@@ -4,8 +4,8 @@ Changelog
 0.6dev (unreleased)
 -------------------
 
-- Nothing changed yet.
-
+- Fix zcml condition on Products.kupu
+  [ale-rt]
 
 0.5 (2013-04-18)
 ----------------
