@@ -134,15 +134,15 @@ prettyPhoto_ is developed by Stephane Caron
 (http://www.no-margin-for-errors.com) and is licensed under Creative
 Commons Attribution 2.5.
 
-Author of collective.prettyphoto: Thomas Massmann (thomas.massmann@inqbus.de).
-
 Contributors (alphabetically)
+-----------------------------
 
 * fRiSi
 * hpeteragitator
 * jensens
 * petschki
 * saily
+* tmassman
 
 .. _prettyPhoto: http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/
 .. _buildout: http://pypi.python.org/pypi/zc._buildout
