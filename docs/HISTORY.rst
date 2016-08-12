@@ -1,11 +1,17 @@
 Changelog
 =========
 
-0.6dev (unreleased)
--------------------
+0.7 (unreleased)
+----------------
 
 - Nothing changed yet.
 
+
+0.6 (2016-02-10)
+----------------
+
+- Fix zcml condition on Products.kupu
+  [ale-rt]
 
 0.5 (2013-04-18)
 ----------------

@@ -56,7 +56,7 @@
     />
 
     <!-- import steps -->
-    <genericsetup:importStep zcml:condition="installed Products.kupu"
+    <genericsetup:importStep zcml:condition="installed Products.kupu.config"
         name="collective.prettyphoto"
         title="prettyPhoto configuration"
         description="Configures Kupu pagraph styles for prettyPhoto"

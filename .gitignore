@@ -7,6 +7,9 @@
 .mr.developer.cfg
 
 # local development
+/include/
+/lib/
+/local/
 bin/
 develop-eggs/
 eggs/
