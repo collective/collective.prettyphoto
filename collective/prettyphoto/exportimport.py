@@ -56,6 +56,8 @@ def import_various(context):
 
     # Define portal properties
     ptool = getToolByName(site, 'portal_properties')
+    if not hasattr(ptool, 'prettyphoto_properties'):
+        ptool.addPropertySheet('prettyphoto_properties', 'PrettyPhoto Properties')
     props = ptool.prettyphoto_properties
 
     for prop in _PROPERTIES:
