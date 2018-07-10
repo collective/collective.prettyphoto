@@ -15,6 +15,43 @@
         layer="..interfaces.IPrettyPhotoSpecific"
     />
 
+    <include package="plone.app.contentmenu" />
+
+    <browser:page
+      name="prettyPhoto_album_view"
+      permission="zope2.View"
+      for="plone.app.contenttypes.interfaces.IFolder"
+      class="plone.app.contenttypes.browser.folder.FolderView"
+      layer="..interfaces.IPrettyPhotoSpecific"
+      template="listing_album.pt"
+      title="Pretty Photo Album View"
+      menu="plone_displayviews"
+      />
+
+<!-- Copied from plone.app.collection to make prettyphoto work with new collections -->
+    <browser:page
+        name="prettyPhoto_album_view"
+        permission="zope2.View"
+        for="plone.app.collection.interfaces.ICollection"
+        template="thumbnail_view.pt"
+    />
+    <browser:menuItems
+        for="plone.app.collection.interfaces.ICollection"
+        menu="plone_displayviews">
+        <browser:menuItem
+            title="Thumbnail view (prettyPhoto)"
+            action="prettyPhoto_album_view"
+        />
+    </browser:menuItems>
+
+    <browser:page
+      name="convert_albums_to_prettyphoto"
+      permission="cmf.ManagePortal"
+      for="*"
+      class=".update_albums.UpdateAlbums"
+      layer="..interfaces.IPrettyPhotoSpecific"
+      />
+
     <!-- Activate prettyPhoto for 'prettyPhoto'-tagged elements -->
     <browser:page
         name="prettyPhoto.js"
